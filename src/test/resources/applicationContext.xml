@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tool="http://javaq.org/schema/httpclient"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://javaq.org/schema/httpclient http://javaq.org/schema/httpclient/httpclient-1.0.xsd">
+
+    <tool:httpClient id="httpClient"
+                       privateKeyPath="ssl/kamd.keystore"
+                       privateKeyPassword="123456"
+                       trustedCertsPath="trustedfile/"
+                       trustedStorePassword="changeit"
+                       trustedHosts="127.0.0.1"/>
+
+</beans>

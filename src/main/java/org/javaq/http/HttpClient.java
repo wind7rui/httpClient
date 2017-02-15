@@ -9,6 +9,8 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.message.BasicNameValuePair;
+import org.javaq.http.common.logger.Logger;
+import org.javaq.http.common.logger.LoggerFactory;
 import org.javaq.http.core.BaseHttpClient;
 import org.springframework.scheduling.annotation.Async;
 
@@ -18,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 public class HttpClient extends BaseHttpClient {
-
+    private static final Logger LOGGER = LoggerFactory.getLogger(HttpClient.class);
 
     /**
      * 异步发送get请求
@@ -30,7 +32,7 @@ public class HttpClient extends BaseHttpClient {
         try {
             super.get(url);
         } catch (IOException e) {
-            //LOGGER.error("Fail to send get request", e);
+            LOGGER.error("Fail to send get request", e);
         }
     }
 
@@ -38,7 +40,7 @@ public class HttpClient extends BaseHttpClient {
         try {
             return super.get(url);
         } catch (IOException e) {
-            //LOGGER.error("Fail to send get request", e);
+            LOGGER.error("Fail to send get request", e);
         }
         return null;
     }
@@ -53,7 +55,7 @@ public class HttpClient extends BaseHttpClient {
         try {
             return super.execute(httpPost, socketTimeout, connectTimeout);
         } catch (IOException e) {
-            //LOGGER.error(e, "Fail to send post request,message {}", e.getMessage());
+            LOGGER.error("Fail to send post request", e);
         } finally {
             httpPost.abort();
         }
@@ -92,7 +94,7 @@ public class HttpClient extends BaseHttpClient {
         try {
             return super.execute(httpPost, requestEntity.getSocketTimeout(), requestEntity.getConnectTimeout());
         } catch (IOException e) {
-            //LOGGER.error(e, "Fail to send post request,message {}", e.getMessage());
+            LOGGER.error("Fail to send post request", e);
             throw e;
         } finally {
             if (requestEntity.canAbort()) {
@@ -111,7 +113,7 @@ public class HttpClient extends BaseHttpClient {
         try {
             return super.execute(httpPost);
         } catch (IOException e) {
-            //LOGGER.error(e, "Fail to send post request,message {}", e.getMessage());
+            LOGGER.error("Fail to send post request", e);
         } finally {
             if (abort) {
                 httpPost.abort();
@@ -128,7 +130,7 @@ public class HttpClient extends BaseHttpClient {
         try {
             return super.postJson(url, jsonParam);
         } catch (IOException e) {
-            //LOGGER.error("Fail to send post json request", e);
+            LOGGER.error("Fail to send post json request", e);
         }
         return null;
     }

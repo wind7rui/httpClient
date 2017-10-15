@@ -10,9 +10,7 @@ import org.springframework.beans.factory.xml.AbstractSingleBeanDefinitionParser;
 import org.springframework.beans.factory.xml.ParserContext;
 import org.w3c.dom.Element;
 
-/**
- * Created by wangxq on 17/2/14.
- */
+
 public class HttpClientBeanDefinitionParser extends AbstractSingleBeanDefinitionParser {
 
     @Override

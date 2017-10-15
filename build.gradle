@@ -10,21 +10,8 @@ repositories {
 
 ext.spring_version = "4.1.2.RELEASE"
 ext.spring = ["org.springframework:spring-core:$spring_version",
-//              "org.springframework:spring-expression:$spring_version",
               "org.springframework:spring-beans:$spring_version",
-//              "org.springframework:spring-aop:$spring_version",
               "org.springframework:spring-context:$spring_version",
-//              "org.springframework:spring-context-support:$spring_version",
-//              "org.springframework:spring-tx:$spring_version",
-//              "org.springframework:spring-orm:$spring_version",
-//              "org.springframework:spring-oxm:$spring_version",
-//              "org.springframework:spring-web:$spring_version",
-//              "org.springframework:spring-jdbc:$spring_version",
-//              "org.springframework:spring-webmvc:$spring_version",
-//              "org.springframework:spring-test:$spring_version",
-//              'javax.mail:mail:1.4.7',
-//              'org.springframework.integration:spring-integration-mail:2.0.5.RELEASE',
-//              "aopalliance:aopalliance:1.0"
 ]
 ext.http_client = ["org.apache.httpcomponents:httpclient:4.4"]
 ext.guava = ["com.google.guava:guava:18.0"]

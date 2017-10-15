@@ -17,3 +17,5 @@ build.xml
 *.log
 *.log.1
 gradle
+gradlew
+gradlew.bat

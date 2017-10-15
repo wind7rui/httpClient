@@ -11,6 +11,6 @@ public class HttpClientTest {
     public void should_return_success_code() throws Exception {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         HttpClient httpClient = (HttpClient) applicationContext.getBean("httpClient");
-        System.out.println(httpClient.sendGetRequestAsString("http://www.baissdu.com"));
+        System.out.println(httpClient.sendGetRequestAsString("http://www.baidu.com"));
     }
 }

@@ -8,7 +8,7 @@
     <tool:httpClient id="httpClient"
                        privateKeyPath="ssl/kamd.keystore"
                        privateKeyPassword="123456"
-                       trustedCertsPath="trustedfile/"
+                       trustedCertsPath=""
                        trustedStorePassword="changeit"
                        trustedHosts="127.0.0.1"/>
 

@@ -6,3 +6,6 @@
 3.支持post和get方式  
 
 4.支持xml和json报文
+
+# 使用方法
+参考test包下HttpClientTest.java
